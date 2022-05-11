@@ -16,16 +16,17 @@ export default function NewTask() {
       .then((resp) => {
         console.log(task);
         console.log("success!");
-        // navigate("/tasks");
+        navigate("/tasks");
       })
       .catch((err) => console.error(err));
   };
 
   const updatedTaskState = (e) => {
-    const { name, value } = e.target;
-    console.log(`${name}  ${value}`);
+    const { name, value } = e.target; //input element
+    // console.log(`${name}  ${value}`);
     const newTask = { ...task, [name]: value };
     setTask(newTask);
+    console.log(task);
   };
 
   return (

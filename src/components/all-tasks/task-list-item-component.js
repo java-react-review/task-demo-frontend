@@ -10,8 +10,7 @@ export default function TaskListItem(props) {
   }
   return (
     <ListGroup.Item>
-      {props.record.description} {priorityIndicator} --
-      {props.record.dueDate}
+      {props.record.description} {priorityIndicator}
     </ListGroup.Item>
   );
 }
